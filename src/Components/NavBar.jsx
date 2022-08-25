@@ -12,7 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Icon from './Icon';
+
+import CardWidget from './CardWidget';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -127,7 +128,7 @@ export default function NavBar () {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Icon cant={20}/>
+            <CardWidget cant={20}/>
           </Box>
         </Toolbar>
       </Container>
