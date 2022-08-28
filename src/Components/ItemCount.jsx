@@ -29,7 +29,7 @@ else if (contador == 10){
 }}>mas</button>
 
 <button onClick={()=>{
-if (contador ) {
+if (contador <10) {
 onAdd (contador);
 setContador(initial);
 alert ('gracias por su compra de productos' )
