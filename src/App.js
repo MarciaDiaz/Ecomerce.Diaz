@@ -15,9 +15,7 @@ export default function App() {
 
 const saludo = 'hola!'
 
-  let producto1 = { id: 100, name: "zapatilla nike", price: 100};
-  let producto2 = { id: 101, name: "zapatilla lolo", price: 150};
-  let producto3 = { id: 102, name: "zapatilla fila", price: 200};
+
 
 
  const stock = 10;
@@ -35,9 +33,7 @@ const saludo = 'hola!'
 <ItemListContainer saludo={saludo} greeting = 'hello!'/>
 <ItemDetailCointener/>
 <ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
-<Producto item={producto1}/>
-<Producto item={producto2}/>
-<Producto item={producto3}/>
+
 
 
 

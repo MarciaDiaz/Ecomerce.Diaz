@@ -12,6 +12,9 @@ const ItemListContainer = (props) => {
   const[loading, setLoading]=useState([])
   const{saludo, greeting, stock, initial, onAdd} = props
   
+
+
+
   
   useEffect(()=>{
 
@@ -44,7 +47,7 @@ const ItemListContainer = (props) => {
       <p>{stock}</p>
       <p>{initial}</p>
       <p>{onAdd}</p>
-      {loading ? <p>Cargando...</p>:<ItemList productList={listProducts}/>}
+      {loading ? <p>Cargando2...</p>:<ItemList productList={listProducts}/>}
     </div>
   )
 }

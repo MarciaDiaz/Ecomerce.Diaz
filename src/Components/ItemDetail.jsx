@@ -1,9 +1,12 @@
 import React from "react";
 import Item from "./Item";
 import ItemCount from "./ItemCount";
+import { data } from '../mocks/dataMosck'
 
 const ItemDetail = ({productDetail}) => {
+
 const {name, description, price, stock, img}= productDetail
+
     return(
 
 <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alingItems:'center'}}>
