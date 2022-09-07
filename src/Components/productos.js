@@ -1,32 +1,34 @@
 const productos = [
     {
-        "precio": 11500,
+        "price": 11500,
         "id"  : 1,
-        "nombre": "Celulares",
-        "img": "./assets/celular.png",
+        "name": "Celulares",
+        "img": "../assets/celular.png",
+        "description": "lalalalalalalal",
     },
     {
-        "precio": 12000,
+        "price": 12000,
         "id"  : 2,
-        "nombre": "Laptop",
+        "name": "Laptop",
         "img": "./assets/laptop.png",
+        "description": "lalalalalalalal",
     },
     {
-        "precio": 10100,
+        "price": 10100,
         "id"  : 3,
-        "nombre": "Licuadora",
+        "name": "Licuadora",
         "img": "./assets/licuadora.png",
     },
     {
-        "precio": 10760,
+        "price": 10760,
         "id"  : 4,
-        "nombre": "Mixer",
+        "name": "Mixer",
         "img": "./assets/mixer.png",
     },
     {
-        "precio": 12345,
+        "price": 12345,
         "id"  : 5,
-        "nombre": "Mixer PRO",
+        "name": "Mixer PRO",
         "img": "./assets/mixer.png",
     }
 

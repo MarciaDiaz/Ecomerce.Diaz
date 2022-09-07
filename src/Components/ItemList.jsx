@@ -5,13 +5,14 @@ const ItemList = ({listProducts}) => {
 
     return (
 
-        <div>
+        <div className="cardContainer">
+
 {listProducts.map (product=> <Item
 key={product.id} 
 product={product}/>)}
 
 
-        </div>
+        </div>  
     )
 }
 

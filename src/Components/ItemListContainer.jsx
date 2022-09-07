@@ -11,8 +11,8 @@ const ItemListContainer = (props) => {
   
   useEffect(()=>{
 
-customFetch(productos)
-.then(data=>setListProducts(data))
+      customFetch(productos)
+      .then(data=>setListProducts(data))
 
 
   },[])
@@ -24,13 +24,13 @@ customFetch(productos)
   return (
     
     
-    <div style={{backgroundColor: "red", marginTop: "5px", border: "solid 2px black"}}>
+    <div style={{marginTop: "5px", border: "solid 2px black"}}>
     
     
     
     <p>{saludo}</p>
     <p>{greeting}</p>
-<ItemList listProducts={listProducts}/>
+    <ItemList listProducts={listProducts}/>
     
       <p>{stock}</p>
       <p>{initial}</p>

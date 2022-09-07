@@ -4,7 +4,8 @@ import Footer from "./Components/Footer"
 import Producto from "./Components/producto";
 import ItemListContainer from "./Components/ItemListContainer";
 import ItemCount from "./Components/ItemCount";
-
+import './App.css'
+import ItemDetailContainer from "./Components/ItemDetailContainer";
 
 
 
@@ -31,6 +32,7 @@ const saludo = 'hola!'
 <NavBar />
 
 <ItemListContainer saludo={saludo} greeting = 'hello!'/>
+
 <ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
 <Producto item={producto1}/>
 <Producto item={producto2}/>
