@@ -7,3 +7,4 @@ export const customFetch = (products) => {
         }, 2000)
     })
 }
+
