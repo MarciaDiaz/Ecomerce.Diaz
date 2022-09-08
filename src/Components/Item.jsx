@@ -1,8 +1,10 @@
 import React from "react";
+import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({product}) => {
 
-    const{img, name, description, price, stock}=product
+    const{id, img, name, description, price, stock}=product
+    const navegar = useNavigate()
 
     return (
 
@@ -18,7 +20,8 @@ const Item = ({product}) => {
         <p className="card-text">{product.description}</p>
 
         </div>
-        <button className="btn btn-primary">ver mas</button>
+        <button onClick={()=>navegar(`/detail/${id}`)}>ver mas</button>
+        
 </div>   
     )
 }

@@ -1,7 +1,7 @@
 import React, {useEffect, useState}from 'react'
-import { customFetch } from './customFetch'
+
 import ItemList from './ItemList'
-import productos from './productos'
+
 import {data} from '../mocks/dataMosck.js'
 
 

@@ -1,12 +1,12 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer"
-import Producto from "./Components/producto";
-import ItemListContainer from "./Components/ItemListContainer";
-import ItemCount from "./Components/ItemCount";
-import ItemDetailCointener from "./Components/ItemDetailContainer"
-import './App.css'
 
+import ItemListContainer from "./Components/ItemListContainer";
+
+import ItemDetailCointener from "./Components/ItemDetailContainer";
+import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 
@@ -26,23 +26,14 @@ const saludo = 'hola!'
 
   return (
 
-<div>
-
-<NavBar />
-
-<ItemListContainer saludo={saludo} greeting = 'hello!'/>
-<ItemDetailCointener/>
-
-
-
-
-
-<Footer/>
-
-
-
-
-</div>
+<BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path="/categoria/:categoriaId" element={<ItemListContainer/>}/>
+          <Route path='/detail/:id' element={<ItemDetailCointener/>}/>
+        </Routes>
+        </BrowserRouter>
 
 
   )

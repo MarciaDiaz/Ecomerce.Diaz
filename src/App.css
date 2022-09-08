@@ -9,6 +9,11 @@
   flex-wrap: wrap;
   border: solid 2px black;
 }
+
+.links{
+  
+  text-decoration: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

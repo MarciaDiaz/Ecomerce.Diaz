@@ -12,11 +12,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
 import CardWidget from './CardWidget';
+import { NavLink } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+
+
+const pages = [{enlace:'/categoria/nuevos', nombre:'Nuevos'},{enlace:'/categoria/ofertas', nombre:'Oferta'}, {enlace:'/categoria/vendidos', nombre:'MasVendidos'}];
+
 
 export default function NavBar () {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -42,11 +45,12 @@ export default function NavBar () {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           
+          <NavLink to='/' className='links'>
+
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+        
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -57,8 +61,11 @@ export default function NavBar () {
               textDecoration: 'none',
             }}
           >
-            FRESA
+         
           </Typography>
+
+
+          </NavLink>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -89,9 +96,9 @@ export default function NavBar () {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <NavLink className={'links'} to={page.enlace}>{page.nombre}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -116,15 +123,11 @@ export default function NavBar () {
             FRESA
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <NavLink className={'links'} to={page.enlace}>{page.nombre}</NavLink>
+                </MenuItem>
+              ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
