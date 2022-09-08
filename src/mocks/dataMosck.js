@@ -1,44 +1,48 @@
 const productos = [
 
-  {   id:'01',
-  name:'random1',
- category:'nuevos',
-  description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nibh cras pulvinar mattis nunc. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Bibendum at varius vel pharetra vel turpis nunc. Pellentesque dignissim enim sit amet venenatis",
- price:75,
-  img:'https://picsum.photos/200',
-   stock:5,
+  {   "price": 11500,
+  "id"  : '00',
+  "name": "Otra Cosa",
+  "img":"https://picsum.photos/200",
+  "description": "lalalalalalalal",
+  "stock":10,
   },
     {
         "price": 11500,
         "id"  : '01',
         "name": "Celulares",
-        "img": "../assets/celular.png",
+        "img": "/assets/celular.png",
         "description": "lalalalalalalal",
+        "stock":10,
     },
     {
         "price": 12000,
         "id"  : '02',
         "name": "Laptop",
-        "img": "./assets/laptop.png",
+        "img": "/assets/laptop.png",
         "description": "lalalalalalalal",
+        "stock":10,
     },
     {
         "price": 10100,
         "id"  : '03',
         "name": "Licuadora",
-        "img": "./assets/licuadora.png",
+        "img": "/assets/licuadora.png",
+        "stock":10,
     },
     {
         "price": 10760,
         "id"  : '04',
         "name": "Mixer",
-        "img": "./assets/mixer.png",
+        "img": "/assets/mixer.png",
+        "stock":10,
     },
     {
         "price": 12345,
         "id"  : '05',
         "name": "Mixer PRO",
-        "img": "./assets/mixer.png",
+        "img": "/assets/mixer.png",
+        "stock":10,
     }
 
 ]
@@ -55,6 +59,6 @@ export const data = new Promise((resolve, reject) => {
         reject('salio mal')
       }
 
-    },10000)
+    },5000)
 
   })

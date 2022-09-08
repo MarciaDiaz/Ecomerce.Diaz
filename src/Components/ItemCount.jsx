@@ -21,17 +21,14 @@ if(contador < stock){
 
     setContador(contador+1);
 }
-else if (contador == 10){
 
-    alert ('no hay mas stock');
-}
 
 }}>mas</button>
 
 <button onClick={()=>{
 if (contador <10) {
 onAdd (contador);
-setContador(initial);
+/*setContador(initial);*/
 alert ('gracias por su compra de productos' )
 }
 }}>agregar</button>

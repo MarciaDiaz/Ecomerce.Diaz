@@ -1,11 +1,17 @@
 import React from "react";
-import Item from "./Item";
+
 import ItemCount from "./ItemCount";
-import { data } from '../mocks/dataMosck'
+
 
 const ItemDetail = ({productDetail}) => {
 
+    let totalStock = 0;
+
 const {name, description, price, stock, img}= productDetail
+const onAdd = (cantidad) => {
+
+    console.log(`compraste ${cantidad} del producto ${name}`)
+}
 
     return(
 
@@ -15,6 +21,7 @@ const {name, description, price, stock, img}= productDetail
     <img src={img} alt={name} style={{width:'15rem'}}/>
     <p>{description}</p>
     <p>{price}</p>
+    <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
    
 </div>
 

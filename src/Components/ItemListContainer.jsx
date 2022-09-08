@@ -9,8 +9,8 @@ const ItemListContainer = (props) => {
 
    
   const [listProducts, setListProducts]= useState([])
-  const[loading, setLoading]=useState([])
-  const{saludo, greeting, stock, initial, onAdd} = props
+  const[loading, setLoading]=useState(false)
+  const{saludo, greeting} = props
   
 
 
@@ -18,8 +18,7 @@ const ItemListContainer = (props) => {
   
   useEffect(()=>{
 
-      customFetch(productos)
-      .then(data=>setListProducts(data))
+    
       setLoading (true)
       data
       .then((res)=>setListProducts(res))
@@ -42,12 +41,8 @@ const ItemListContainer = (props) => {
     
     <p>{saludo}</p>
     <p>{greeting}</p>
-    <ItemList listProducts={listProducts}/>
-    
-      <p>{stock}</p>
-      <p>{initial}</p>
-      <p>{onAdd}</p>
-      {loading ? <p>Cargando2...</p>:<ItemList productList={listProducts}/>}
+  
+      {loading ? <p>Cargando2...</p>:<ItemList listProducts={listProducts}/>}
     </div>
   )
 }

@@ -20,9 +20,9 @@ const saludo = 'hola!'
 
  const stock = 10;
  const initial = 1;
- let totalStock = 0;
+ 
 
- const onAdd = (cantidad) => totalStock ===10? alert ("agotado") : totalStock <= cantidad;
+ 
 
   return (
 
@@ -32,7 +32,7 @@ const saludo = 'hola!'
 
 <ItemListContainer saludo={saludo} greeting = 'hello!'/>
 <ItemDetailCointener/>
-<ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
+
 
 
 
