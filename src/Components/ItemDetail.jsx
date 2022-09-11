@@ -1,16 +1,20 @@
-import React from "react";
-
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import Cart from "./Cart";
 
 
 const ItemDetail = ({productDetail}) => {
 
-    let totalStock = 0;
+    let [contador, setContador] = useState (1);
+    const [compra, setCompra] = useState (false);
+    const {name, description, price, stock, img}= productDetail
+    const navegar=useNavigate()
 
-const {name, description, price, stock, img}= productDetail
-const onAdd = (cantidad) => {
+const onAdd = () => {
 
-    console.log(`compraste ${cantidad} del producto ${name}`)
+    console.log(`compraste ${contador} del producto ${name}`)
+    setCompra(true)
 }
 
     return(
@@ -21,8 +25,14 @@ const onAdd = (cantidad) => {
     <img src={img} alt={name} style={{width:'15rem'}}/>
     <p>{description}</p>
     <p>{price}</p>
-    <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
-   
+    {!compra
+    ? <ItemCount stock={stock} initial={1} onAdd={onAdd} contador={contador} setContador={setContador}/>
+    : 
+    <div style={{display:'flex', justifyContent: 'space-around', alingItems: 'center'}}>
+    
+        <button onClick={()=>navegar('/Cart')}>Ir al carrito</button>
+        <button onClick={()=>navegar('/')} >Seguir comprando</button>
+    </div>}
 </div>
 
 

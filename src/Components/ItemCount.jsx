@@ -1,8 +1,8 @@
 import React, { useState, } from "react";
 
-export default function ItemCount ({stock, initial, onAdd}){
+export default function ItemCount ({stock, initial, onAdd, contador, setContador}){
 
-    let [contador, setContador] = useState (initial);
+    
   
 
 const restar = () =>{
