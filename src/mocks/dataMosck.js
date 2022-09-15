@@ -59,6 +59,6 @@ export const data = new Promise((resolve, reject) => {
         reject('salio mal')
       }
 
-    },5000)
+    },3000)
 
   })

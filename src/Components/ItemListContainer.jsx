@@ -35,14 +35,14 @@ const ItemListContainer = (props) => {
   return (
     
     
-    <div style={{marginTop: "5px", border: "solid 2px black"}}>
+    <div style={{marginTop: "5px"}}>
     
     
     
     <p>{saludo}</p>
     <p>{greeting}</p>
   
-      {loading ? <p>Cargando2...</p>:<ItemList listProducts={listProducts}/>}
+      {loading ? <p>Cargando...</p>:<ItemList listProducts={listProducts}/>}
     </div>
   )
 }

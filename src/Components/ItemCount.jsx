@@ -1,36 +1,30 @@
-import React, { useState, } from "react";
+import React from 'react'
 
-export default function ItemCount ({stock, initial, onAdd, contador, setContador}){
-
-    
+const ItemCount = ({initial, stock, onAdd, count, setCount}) => {
   
-
-const restar = () =>{
-    if(contador > initial){
-        setContador(contador-1)
+    const restar = () => {
+        if(count > initial){
+            setCount(count-1)
+        }
     }
-}
 
-const sumar = () => {
-    if(contador<stock){
-        setContador(contador+1)
+    const sumar=()=>{
+        if(count<stock){
+            setCount(count + 1)
+        }
     }
-}
 
-
-return (
-
+  return (
     <>
     <div>
-        <button onClick={sumar}>mas</button>
-        <span>{contador}</span>
-        <button onClick={restar}>menos</button>
+        <button className='btn btn-success' onClick={sumar}>+</button>
+        <span  className='btn btn-light'>{count}</span>
+        <button  className='btn btn-danger'onClick={restar}>-</button>
     </div>
-    <button onClick={onAdd}>comprar</button>
-    
-    
+        <button  className='btn btn-primary m-3'onClick={onAdd}>comprar</button>
     </>
-)
-    
-};
+  )
+}
+
+export default ItemCount
 
