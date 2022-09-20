@@ -131,7 +131,9 @@ export default function NavBar () {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <CardWidget cant={20}/>
+            <NavLink to='/Cart'>
+            <CardWidget/>
+            </NavLink>
           </Box>
         </Toolbar>
       </Container>

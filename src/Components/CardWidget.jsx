@@ -1,13 +1,16 @@
-import React from "react";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React from 'react'
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import { useCart } from '../context/CartContext';
 
-export default function CardWidget({cant}){
-
-    return (
-
-        <>
-        < ShoppingCartIcon />
-        ({cant})
-        </>
-    )
+const CartWidget = () => {
+  const{cartQuantity, cart} =useCart()
+  return (
+    <div>
+        <LocalMallIcon color='secondary' fontSize='large'/>
+        <span>{cartQuantity() || ''}</span>
+    
+    </div>
+  )
 }
+
+export default CartWidget
