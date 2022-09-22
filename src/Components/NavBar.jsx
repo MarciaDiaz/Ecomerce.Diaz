@@ -18,7 +18,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const pages = [{enlace:'/categoria/nuevos', nombre:'Nuevos'},{enlace:'/categoria/ofertas', nombre:'Oferta'}, {enlace:'/categoria/vendidos', nombre:'MasVendidos'}];
+const pages = [{enlace:'/categoria/nuevo', nombre:'Nuevos'},{enlace:'/categoria/ofertas', nombre:'Oferta'}, {enlace:'/categoria/vendidos', nombre:'MasVendidos'}];
 
 
 export default function NavBar () {
