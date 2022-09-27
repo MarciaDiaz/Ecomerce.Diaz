@@ -64,7 +64,7 @@ const Checkout = () => {
                 <label  className="form-label">E-mail</label>
                 <input className="form-control" type="email" placeholder='pepe@gmail.com' name="email"  onChange={datosComprador}/>
             </div>
-            <button className="btn btn-primary" type='submit'>Finalizar Compra</button>
+            <button  type='submit'>Finalizar Compra</button>
             {mensaje && <p style={{color:'red'}}> Por favor complete todos los campos</p>}
         </form>
        </div>
@@ -72,7 +72,7 @@ const Checkout = () => {
        <div>
         <h2>Muchas gracias por su compra!</h2>
         <h4>Su orden es: {orderId}</h4>
-        <button className="btn btn-success" onClick={()=> navigate('/')}>Volver</button>
+        <button onClick={()=> navigate('/')}>Volver</button>
        </div>}
     </div>
   )
