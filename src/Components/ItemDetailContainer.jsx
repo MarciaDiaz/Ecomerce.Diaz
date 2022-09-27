@@ -1,11 +1,12 @@
-
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import { collection, doc, getDoc } from 'firebase/firestore'
+import React, { useState,  useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { db } from '../firebase/firebase'
 import { data } from '../mocks/dataMosck'
 import ItemDetail from './ItemDetail'
-import { useParams } from 'react-router-dom';
-import { db } from '../firebase/firebase'
-import { collection, doc, getDoc } from 'firebase/firestore'
+
+
+
 
 const ItemDetailCointener = () => {
 
@@ -13,22 +14,22 @@ const [productDetail, setProductDetail]= useState({});
 const [loading, setLoading]= useState(true);
 const {id} = useParams();
 
-useEffect (()=>{
-  const coleccionProductos = collection(db, "products")
-  const referenciaDoc = doc(coleccionProductos, id)
-
+useEffect(()=>{
+  //le decimos nuestra base de datos y en que collecion tiene que ir
+  const coleccionProd = collection(db, "products")
+  // hacer una referencia que me traiga el ID del useParams
+  const referenciaDoc = doc(coleccionProd, id)
+  //traemos el documento
   getDoc(referenciaDoc)
-
-    .then((result)=>{
-      setProductDetail({
-        id:result.id,
-        ...result.data()
-      })
-      .catch((error)=>console.log(error))
-  .finally(()=>setLoading(false))
+  .then((result)=>{
+    setProductDetail({
+      id:result.id,
+      ...result.data()
     })
-  
-})
+  })
+  .catch((error)=> console.log(error))
+  .finally(()=> setLoading(false))
+}, [])
 
 
 
@@ -45,7 +46,7 @@ console.log ('detalle', productDetail)
 */
 return (
     <div>
-       {loading ? <p>Cargando1...</p> : <ItemDetail productDetail={productDetail}/>}
+      {loading ? <p>Cargando...</p> : <ItemDetail productDetail={productDetail}/>} 
     </div>
   )
 }

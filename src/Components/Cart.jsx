@@ -31,7 +31,7 @@ const Cart = () => {
 
                     <span>Total a pagar:${cartTotal()}</span>
                     <button onClick={clear}>vaciar carrito</button>
-                    <button>Finalizar Compra</button>
+                    <button onClick={()=>navegar('/checkout')}>Finalizar Compra</button>
                 </div>
             }
         </div>
