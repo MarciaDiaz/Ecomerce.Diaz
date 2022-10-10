@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer"
 
@@ -13,11 +13,16 @@ import Checkout from "./Components/Checkout";
 
 
 
+
+
 export default function App() {
 
-
-
-
+//PARA SUBIR EN FIREBASE
+/*useEffect (()=>{
+  const productoscollecction = collection( db, "products")
+  productos.map((item)=> addDoc(productoscollecction, item))
+}, [])
+*/
 
 
 

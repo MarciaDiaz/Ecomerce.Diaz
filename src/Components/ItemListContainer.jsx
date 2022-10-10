@@ -1,6 +1,6 @@
 import React, {useEffect, useState}from 'react'
 import ItemList from './ItemList'
-
+import { data } from '../mocks/dataMosck'
 import { useParams } from 'react-router-dom'
 import {collection ,getDocs, query, where} from 'firebase/firestore'
 import { db } from '../firebase/firebase'
@@ -18,40 +18,42 @@ const ItemListContainer = (props) => {
 
 //FIREBASE
 
-useEffect (()=>{
-  const productos = categoriaId ? query( collection(db, "products", where("category","==", categoriaId))) : collection (db, "products")
-  getDocs(productos)
-  .then((result)=>{
-    const lista = result.docs.map((product)=>{
+useEffect(()=>{
+  setLoading(true)
+  const coleccionProductos= categoriaId ? query(collection(db, "products"), where("category", "==", categoriaId)) : collection(db, "products")
+  getDocs(coleccionProductos)
+  .then((result)=> {
+    const lista = result.docs.map((producto)=>{
       return{
-        id: product.id,
-        ...product.data()
+        id:producto.id,
+        ...producto.data()
       }
     })
     setListProducts(lista)
   })
-  .catch((error)=>console.log(error))
-  .finally(()=>setLoading(false))
-},[categoriaId])
-
+  .catch((error)=> console.log(error))
+  .finally(()=> setLoading(false))
+}, [categoriaId])
   
   
   
   
-  
+  /*
   
   //MOCKS
- /* useEffect(()=>{
-
-    
-      setLoading (true)
-      data
-      .then((res)=>setListProducts(res))
-      .catch((error)=> console.log(error))
-      .finally(()=>setLoading(false))
-
-
-  },[])
+   useEffect(()=>{
+  setLoading(true)
+    data
+     .then((res)=>{
+       if(categoriaId){
+         setListProducts(res.filter((item)=> item.category === categoriaId))
+       }else{
+         setListProducts(res)
+       }
+     })
+     .catch((error)=> console.log(error))
+     .finally(()=> setLoading(false))
+   }, [categoriaId])
   */
   console.log (listProducts)
   

@@ -13,17 +13,18 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CardWidget from './CardWidget';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate  } from 'react-router-dom';
 
 
 
 
-const pages = [{enlace:'/categoria/nuevo', nombre:'Nuevos'},{enlace:'/categoria/ofertas', nombre:'Oferta'}, {enlace:'/categoria/vendidos', nombre:'MasVendidos'}];
+const pages = [{enlace:'/', nombre: 'Todos'},{enlace:'/categoria/nuevo', nombre:'Nuevos25'},{enlace:'/categoria/oferta', nombre:'Ofertas'}, {enlace:'/categoria/vendido', nombre:'MasVendidos'}];
 
 
 export default function NavBar () {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

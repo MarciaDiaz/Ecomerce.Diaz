@@ -32,6 +32,7 @@ const ItemDetail = ({productDetail}) => {
         <h2>Detalle de: {name}</h2>
         <img src={img} alt={name} style={{width:'25rem'}}/>
         <p>{description}</p>
+        <p>aqui esta la descripcion?</p>
         <p>${price}</p>
        { !compra 
        ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>

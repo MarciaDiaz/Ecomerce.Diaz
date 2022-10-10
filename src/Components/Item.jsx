@@ -4,21 +4,21 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({product}) => {
 
-    const{id, img, name, description, price, stock}=product
+    const{id, img, name, stock}=product
     const navegar = useNavigate()
 
     return (
 
-<div className="card" style={{width:'20rem',margin:'.5rem'}}>
+<div style={{width:'20rem',margin:'.5rem', justifyContent:'center', alignItems:'center' }}>
 
-         <img src={img} className="card-img-top" alt={name}/>
-        <div className="card-body">
+         <img src={img} alt={name}/>
+        <div >
 
-        <p className="card-text">{product.id}</p>
-        <p className="card-text">{product.name}</p>
-        <p className="card-text">${product.price}</p>
-        <p className="card-text">{product.stock}</p>
-        <p className="card-text">{product.description}</p>
+        
+        <p >{product.name}</p>
+        <p >${product.price}</p>
+        <p >{product.stock}</p>
+        
 
         </div>
         <button onClick={()=>navegar(`/detail/${id}`)}>ver mas</button>
