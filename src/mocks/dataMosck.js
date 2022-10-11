@@ -1,10 +1,17 @@
 export const productos = [
-
-
     {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'nuevo',description: "lalalalalalalal",stock:10,},
-   
-    
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'nuevo',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'nuevo',description: "lalalalalalalal",stock:10,},
 
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'vendido',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'vendido',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'vendido',description: "lalalalalalalal",stock:10,},
+
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'oferta',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'oferta',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'oferta',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'oferta',description: "lalalalalalalal",stock:10,},
+    {price: 11500,name: "Celulares",img: "/assets/celular.png", category: 'oferta',description: "lalalalalalalal",stock:10,},
 ]
 
 

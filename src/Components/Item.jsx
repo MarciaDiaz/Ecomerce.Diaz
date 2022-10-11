@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const Item = ({product}) => {
 
-    const{id, img, name, stock}=product
+    const{id, img, name, }=product
     const navegar = useNavigate()
 
     return (
